@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #6e8efb;
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffeb3b; /* Highlight on hover */
+        }
+
+        .main-content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center; /* Center-align text */
+        }
+
+        .main-content img {
+            width: 150px; /* Default image width */
+            border-radius: 50%; /* Circular image */
+            margin: 20px 0; /* Space around the image */
+        }
+
+        .main-content p {
+            margin: 20px 0; /* Space above and below the paragraph */
+        }
+
+        .feedback-form {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feedback-form input, .feedback-form textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .feedback-form input[type="submit"] {
+            background: #6e8efb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .feedback-form input[type="submit"]:hover {
+            background: #5a7fdb; /* Darker blue on hover */
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer .social a {
+            color: white;
+            transition: color 0.3s;
+        }
+
+        footer .social a:hover {
+            color: #ff6b6b; /* Change color on hover */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .main-content {
+                padding: 10px;
+            }
+
+            .main-content img {
+                width: 120px; /* Smaller image for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2 class="logo">Portfo<span>lio</span></h2>
+        <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="skills.html">Skills</a></li>
+        </ul>
+    </nav>
+    
+    <div class="main-content">
+        <h1>Contact Me</h1>
+        <img src="pi1.jpg" alt="Ihieve Gideon">
+        <p>If you have any questions or want to reach out to us for a job, feel free to reach out via email or social media!</p>
+        
+        <div class="feedback-form">
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Feedback" rows="4" required></textarea>
+            <input type="submit" value="Send Feedback">
+        </div>
+    </div>
+
+    <footer>
+        <div class="social">
+            <a href="https://x.com/IhieveG"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/gideon-ihieve-4a1b73244/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2024 Ihieve Gideon. All rights reserved.</p>
+    </footer>
+</body>
+</html>

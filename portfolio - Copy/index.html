@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8; /* Light background color */
+            color: #333; /* Dark text color */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 150px; /* Set a width for the image */
+            border-radius: 50%; /* Make the image circular */
+            margin-top: 20px; /* Space above the image */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow items to wrap */
+            padding: 20px;
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap; /* Allow items to wrap */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffeb3b; /* Yellow hover color */
+        }
+
+        .btn {
+            background: #ff6b6b; /* Red button color */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff4757; /* Darker red on hover */
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        .newsletter form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center; /* Center the form */
+            flex-wrap: wrap; /* Allow wrapping */
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+            max-width: 100%; /* Ensure it doesn't exceed container width */
+            margin-right: 10px; /* Space between email input and button */
+        }
+
+        .newsletter input[type="submit"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ff6b6b; /* Same red color */
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .newsletter input[type="submit"]:hover {
+            background: #ff4757; /* Darker red on hover */
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white; /* White background for sections */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+        }
+
+        section h2 {
+            color: #6e8efb; /* Section title color */
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #333; /* Dark background for footer */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer .social a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        footer .social a:hover {
+            color: #ff6b6b; /* Change color on hover */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column; /* Stack nav items on smaller screens */
+                align-items: flex-start; /* Align items to start */
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack list items */
+                margin-top: 10px; /* Space above the menu */
+            }
+
+            nav ul li {
+                margin: 5px 0; /* Vertical spacing for list items */
+            }
+
+            .newsletter form {
+                flex-direction: column; /* Stack the form elements */
+            }
+
+            .newsletter input[type="email"] {
+                margin-right: 0; /* Remove right margin */
+                margin-bottom: 10px; /* Space below email input */
+                width: 100%; /* Full width on smaller screens */
+            }
+
+            .newsletter input[type="submit"] {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="hero">
+    <nav>
+      <h2 class="logo">Portfo<span>lio</span></h2>
+      <ul>
+        <li><a href="About Us.html">About Me</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+      </ul>
+      <a href="#" class="btn">Subscribe</a>
+    </nav>
+    <div class="content">
+      <h4>Hello, my name is</h4>
+      <h1>Ihieve <span>Gideon</span></h1>
+      <h3>I am a Front-end Developer and Technical Writer</h3>
+      <img src="pi1.jpg" alt="Ihieve Gideon">
+      <div class="newsletter">
+        <form>
+          <input type="email" id="mail" name="email" placeholder="Enter your email">
+          <input type="submit" name="submit" value="Let's start">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I am a Front-end Developer and Technical Writer. I have worked on various projects and written for several blogs, including <a href="https://blog.openreplay.com/authors/gideon-ihieve/" target="_blank">openreplay</a>.</p>
+    </section>
+    
+    <section class="services">
+      <h2>Services</h2>
+      <p>I offer a range of services including web development, technical writing, and more.</p>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>python</li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>If you have any questions, feel free to reach out!</p>
+    </section>
+  </div>
+
+  <footer>
+    <div class="share">
+      <p>Let's Connect</p>
+      <div class="social">
+        <a href="https://x.com/IhieveG"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/gideon-ihieve-4a1b73244/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
