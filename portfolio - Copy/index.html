@@ -3,37 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio - Ihieve Gideon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* Global Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #f0f4f8; /* Light background color */
-            color: #333; /* Dark text color */
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text */
         }
 
-        /* Hero Section Styles */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+            background: #1abc9c;
+            background-repeat: no-repeat;
+            background-size: cover; 
             color: white;
             padding: 50px 20px;
             text-align: center;
         }
 
         .hero img {
-            width: 150px; /* Set a width for the image */
-            border-radius: 50%; /* Make the image circular */
-            margin-top: 20px; /* Space above the image */
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap; /* Allow items to wrap */
             padding: 20px;
         }
 
@@ -42,12 +42,18 @@
             font-weight: bold;
         }
 
+        nav .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: white;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
             margin: 0;
             padding: 0;
-            flex-wrap: wrap; /* Allow items to wrap */
         }
 
         nav ul li {
@@ -61,11 +67,11 @@
         }
 
         nav ul li a:hover {
-            color: #ffeb3b; /* Yellow hover color */
+            color: #1abc9c; /* Highlight color */
         }
 
         .btn {
-            background: #ff6b6b; /* Red button color */
+            background: #1abc9c;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
@@ -75,77 +81,100 @@
         }
 
         .btn:hover {
-            background: #ff4757; /* Darker red on hover */
+            background: #16a085;
         }
 
-        .content {
-            margin-top: 20px;
-        }
-
-        .newsletter form {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center; /* Center the form */
-            flex-wrap: wrap; /* Allow wrapping */
-        }
-
-        .newsletter input[type="email"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            width: 200px;
-            max-width: 100%; /* Ensure it doesn't exceed container width */
-            margin-right: 10px; /* Space between email input and button */
-        }
-
-        .newsletter input[type="submit"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background: #ff6b6b; /* Same red color */
-            color: white;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .newsletter input[type="submit"]:hover {
-            background: #ff4757; /* Darker red on hover */
-        }
-
-        /* Main Content Styles */
+        /* Main Content */
         .main-content {
-            padding: 20px;
-            max-width: 800px;
+            padding: 40px 20px;
+            max-width: 1200px;
             margin: auto;
         }
 
         section {
             margin-bottom: 40px;
-            padding: 20px;
-            background: white; /* White background for sections */
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
         }
 
         section h2 {
-            color: #6e8efb; /* Section title color */
+            color: #1abc9c; /* Highlight color */
+            margin-bottom: 20px;
         }
 
-        /* Footer Styles */
+        /* Projects Section */
+        .projects ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .projects li {
+            flex: 1 1 calc(33% - 20px);
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .projects li:hover {
+            transform: translateY(-10px);
+        }
+
+        .projects a {
+            color: #1abc9c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .projects a:hover {
+            color: #16a085;
+        }
+
+        /* Technologies Section */
+        .skills {
+            padding: 20px;
+            background-color: #1c1c1c;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li {
+            margin-bottom: 10px;
+        }
+
+        .skills .progress-bar {
+            background-color: #333;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skills .progress-bar span {
+            display: block;
+            background-color: #1abc9c;
+            height: 20px;
+            border-radius: 20px;
+        }
+
+        /* Footer */
         footer {
-            background: #333; /* Dark background for footer */
+            background: #181818;
             color: white;
             text-align: center;
             padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
 
         footer .social {
             display: flex;
             justify-content: center;
             gap: 15px;
+            margin-bottom: 20px;
         }
 
         footer .social a {
@@ -155,104 +184,122 @@
         }
 
         footer .social a:hover {
-            color: #ff6b6b; /* Change color on hover */
+            color: #1abc9c;
         }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column; /* Stack nav items on smaller screens */
-                align-items: flex-start; /* Align items to start */
+            .projects ul {
+                flex-direction: column;
+            }
+
+            .projects li {
+                flex: 1 1 100%;
+            }
+
+            nav .hamburger {
+                display: block;
             }
 
             nav ul {
-                flex-direction: column; /* Stack list items */
-                margin-top: 10px; /* Space above the menu */
+                display: none;
+                flex-direction: column;
+                margin-top: 10px;
+                background: #333;
+                padding: 10px 0;
+            }
+
+            nav ul.show {
+                display: flex;
             }
 
             nav ul li {
-                margin: 5px 0; /* Vertical spacing for list items */
-            }
-
-            .newsletter form {
-                flex-direction: column; /* Stack the form elements */
-            }
-
-            .newsletter input[type="email"] {
-                margin-right: 0; /* Remove right margin */
-                margin-bottom: 10px; /* Space below email input */
-                width: 100%; /* Full width on smaller screens */
-            }
-
-            .newsletter input[type="submit"] {
-                width: 100%; /* Full width on smaller screens */
+                margin: 10px 0;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-  <div class="hero">
-    <nav>
-      <h2 class="logo">Portfo<span>lio</span></h2>
-      <ul>
-        <li><a href="About Us.html">About Me</a></li>
-        <li><a href="Services.html">Services</a></li>
-        <li><a href="Skills.html">Skills</a></li>
-        <li><a href="Contact Us.html">Contact Us</a></li>
-      </ul>
-      <a href="#" class="btn">Subscribe</a>
-    </nav>
-    <div class="content">
-      <h4>Hello, my name is</h4>
-      <h1>Ihieve <span>Gideon</span></h1>
-      <h3>I am a Front-end Developer and Technical Writer</h3>
-      <img src="pi1.jpg" alt="Ihieve Gideon">
-      <div class="newsletter">
-        <form>
-          <input type="email" id="mail" name="email" placeholder="Enter your email">
-          <input type="submit" name="submit" value="Let's start">
-        </form>
-      </div>
+    <div class="hero">
+        <nav>
+            <div class="logo">Ihieve Gideon</div>
+            <div class="hamburger" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h3>Front-end Developer & Technical Writer</h3>
+            <img src="pi1.jpg" alt="Ihieve Gideon">
+            <br />
+            <a href="https://www.linkedin.com/in/gideon-ihieve-4a1b73244/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Ihieve1"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Ihieve"><i class="fab fa-github"></i></a>
+        </div>
     </div>
-  </div>
 
-  <div class="main-content">
-    <section class="about">
-      <h2>About Me</h2>
-      <p>I am a Front-end Developer and Technical Writer. I have worked on various projects and written for several blogs, including <a href="https://blog.openreplay.com/authors/gideon-ihieve/" target="_blank">openreplay</a>.</p>
-    </section>
-    
-    <section class="services">
-      <h2>Services</h2>
-      <p>I offer a range of services including web development, technical writing, and more.</p>
-    </section>
+    <div class="main-content">
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <p>I am a Front-end Developer and Technical Writer with experience working on various projects. I have contributed to several blogs, including <a href="https://blog.openreplay.com/authors/gideon-ihieve/" target="_blank">OpenReplay</a>.</p>
+        </section>
 
-    <section class="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>python</li>
-      </ul>
-    </section>
+        <section class="skills" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML </li>
+                <li>CSS </li>
+                <li>JavaScript</li>
+                <li>D3.js</li>
+                <li>Tailwind</li>
+                <li>React </li>
+                <li>Next </li>
+            </ul>
+        </section>
 
-    <section class="contact">
-      <h2>Contact Me</h2>
-      <p>If you have any questions, feel free to reach out!</p>
-    </section>
-  </div>
+        <section class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Portfolio Website</strong> - A personal portfolio site built with HTML, CSS, and JavaScript. <a href="https://portfolio-site-woad-beta.vercel.app/" target="_blank">Live Site</a></li>
+                <li><strong>AI Email Generator(Pen Ai)</strong> - An AI-based web app generating email templates(Team project). <a href="https://pen-ai-9xgc.vercel.app/" target="_blank">Live site</a></li>
+                <li><strong>React Arborist</strong> - Article on building dynamic tree structures with React. <a href="https://blog.openreplay.com/interactive-tree-components-with-react-arborist" target="_blank">Read Article</a></li>
+                <li><strong>An introduction to blazor</strong> - Article on how blazor uses c#. <a href="https://blog.openreplay.com/an-introduction-to-blazor" target="_blank">Read Article</a></li>
+                <li><strong>Web assembly</strong> - Article on how to unluck high performance sites with web assembly. <a href="https://blog.openreplay.com/unlock-high-performance-with-webassembly" target="_blank">Read Article</a></li>
+                <li><strong>CSS-houdini</strong> - Article on how css-houdini improves styling. <a href="https://blog.openreplay.com/css-houdini--the-future-of-styling" target="_blank">Read Article</a></li>
+                <li><strong>Breadcrumbs</strong> - Article on how to add breadcrumbs to your website. <a href="https://blog.openreplay.com/how-to-add-breadcrumbs-to-your-website" target="_blank">Read Article</a></li>
+                <li><strong>Data visualisation wit D3.js</strong> - Article on how to use D3.js for data visualisation. <a href="https://blog.openreplay.com/data-visualization-with-d3-js" target="_blank">Read Article</a></li>
+            </ul>
+        </section>
 
-  <footer>
-    <div class="share">
-      <p>Let's Connect</p>
-      <div class="social">
-        <a href="https://x.com/IhieveG"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/gideon-ihieve-4a1b73244/"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-      </div>
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to collaborate, feel free to <a href="mailto:ihievegideon@gmail.com">reach out</a>.</p>
+        </section>
     </div>
-  </footer>
+
+    <footer>
+        <div class="social">
+            <a href="https://twitter.com/GideonIhe"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/Ihieve1"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Ihieve"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/gideon-ihieve-4a1b73244/"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2024 Ihieve Gideon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
